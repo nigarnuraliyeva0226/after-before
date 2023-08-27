@@ -1,0 +1,61 @@
+
+.switch__container {
+    border: 1px solid black;
+    margin: 0 10px;
+    width: 800px;
+    height: 1000px;
+  }
+  
+  .switch {
+    visibility: hidden;
+    position: absolute;
+  }
+  
+  .switch + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+  }
+  .switch--shadow + label {
+    padding: 2px;
+    padding-left: 80px;
+    width: 220px;
+    height: 60px;
+    background-color: #dddddd;
+    border-radius: 60px;
+  }
+  .switch--shadow + label:before,
+  .switch--shadow + label:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: "";
+  }
+  .switch--shadow + label:before {
+    right: 1px;
+    background-color: #f1f1f1;
+    border-radius: 60px;
+    transition: background 0.4s;
+  }
+  .switch--shadow + label:after {
+    width: 62px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+  }
+  .switch--shadow:checked + label:before  {
+    background-color: #8ce196;
+  }
+  .switch--shadow:checked + label:after {
+    transform: translateX(230px);
+  }
+  .switch--shadow:checked + h1::after {
+    content: "Hide Image";
+    top: 0;
+    left: 0;
+  }
